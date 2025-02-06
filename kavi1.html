@@ -22,3 +22,16 @@
   <p>This paragraph remains static while the title blinks.</p>
 </body>
 </html>
+  <title>Change Background Example</title>
+  <script>
+    function changeBackground() {
+      document.body.style.backgroundColor = 
+        '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }
+  </script>
+</head>
+<body>
+  <h1>Click the Button to Change Background Color!</h1>
+  <button onclick="changeBackground()">Change Background</button>
+</body>
+</html>
