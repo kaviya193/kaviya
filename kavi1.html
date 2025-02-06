@@ -21,11 +21,41 @@
     function changeBackground() {
       document.body.style.backgroundColor = 
         '#' + Math.floor(Math.random() * 16777215).toString(16);
+  <title>Counter App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
     }
-  </script>
+    #count {
+      font-size: 2rem;
+      margin: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Click the Button to Change Background Color!</h1>
-  <button onclick="changeBackground()">Change Background</button>
+  <h1>Simple Counter App</h1>
+  <button onclick="decrement()">-</button>
+  <span id="count">0</span>
+  <button onclick="increment()">+</button>
+
+  <script>
+    let count = 0;
+
+    function increment() {
+      count++;
+      updateDisplay();
+    }
+
+    function decrement() {
+      count--;
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      document.getElementById("count").innerText = count;
+    }
+  </script>
 </body>
 </html>
