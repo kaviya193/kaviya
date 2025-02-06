@@ -1,6 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head><title>Hello World</title></head>
-  <body><h1>Hello, World!</h1></body>
-  <h1>kavi</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blinking Text Example</title>
+  <style>
+    .blink {
+      animation: blinker 1s linear infinite;
+      color: red;
+      font-size: 24px;
+    }
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="blink">Welcome to the Blinking Text Example!</h1>
+  <p>This paragraph remains static while the title blinks.</p>
+</body>
 </html>
